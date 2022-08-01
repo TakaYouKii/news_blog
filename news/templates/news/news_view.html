@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+
+<a href=" last "><button>Последние новости</button></a>
+<a href=" / "><button>Новости</button></a>
+<a href=" about "><button>О нас </button></a>
+<h1>Новости</h1>
+{%  for item in news  %}
+    <div>
+        <p> {{ item.title }}</p>
+        <p> {{ item.content }}</p>
+        <p> {{ item.created_at| date:"Y-m-d h:i" }}</p>
+    </div>
+    <hr>
+{% endfor %}
+</body>
+</html>
